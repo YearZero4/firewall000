@@ -12,15 +12,14 @@ def host_del():
   os.system(f"@echo off>{ruta}")
  else:
   os.system(f">{ruta}")
- 
-url='https://www.google.com'.replace('https://', '').replace('http://', '')
+
 ruta='C:\\Windows\\System32\\drivers\\etc\\hosts'
-hosname='127.0.0.1'
+hostname='127.0.0.1'
 
 def restricted_url():
  url = entry_clave.get()
  with open(ruta, "a") as f:
-  f.write(f"\n{hosname}\t {url}")
+  f.write(f"\n{hostname}\t {url}")
  messagebox.showwarning("ADVERTENCIA", "SE DENEGO EL DOMINIO")
 
 def restricted_dic_domains():
@@ -29,7 +28,7 @@ def restricted_dic_domains():
   for i in x:
    domain=i.replace("\n", "")
    with open(ruta, "a") as f:
-    f.write(f"\n{hosname}\t www.{domain}")
+    f.write(f"\n{hostname}\t www.{domain}")
     f.close()
  messagebox.showwarning("ADVERTENCIA", "SE HAN PROHIBIDO ACCEDER TODOS LOS DOMINIOS DEL DICCIONARIO")
 
