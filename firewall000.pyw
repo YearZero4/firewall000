@@ -48,7 +48,7 @@ def all_delete():
   with open(ruta, 'a') as f:
    f.write(f"{i}\n")
    f.close()
- messagebox.showinfo("Operacion exitosa", "SIN RESTRCCIONES")
+ messagebox.showinfo("Operacion exitosa", "SIN RESTRICCIONES")
 
 def eliminar_url():
  url = entry_clave2.get()
